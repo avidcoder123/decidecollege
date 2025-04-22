@@ -161,3 +161,7 @@ print(f"{ut_counts/ut_counts.sum() * 100}")
 print("Caltech industry:")
 caltech_counts = pd.Series(data=dict(zip(industry_data["company"], industry_data["Caltech"])), index=industry_data["company"])
 print(f"{caltech_counts/caltech_counts.sum() * 100}")
+
+print("UT industry:")
+ut_counts = pd.Series(data=dict(zip(industry_data["company"], industry_data["UT"])), index=industry_data["company"])
+print(f"{ut_counts/ut_counts.sum() * 100}")
