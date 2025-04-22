@@ -145,3 +145,19 @@ if p < 0.05:
     print(f"The difference in salary is {low:.1f}k to {high:.1f}k (95% confidence).")
 else:
     print(f"There is not a significant difference in salary (p={p}).")
+
+print("")
+print("-"*15)
+print("Data Tallies")
+
+print("Caltech doctorates:")
+caltech_counts = caltech_doctoral["doctorate"].value_counts()
+print(f"{caltech_counts/caltech_counts.sum() * 100}")
+
+print("UT doctorates:")
+ut_counts = ut_doctoral["doctorate"].value_counts()
+print(f"{ut_counts/ut_counts.sum() * 100}")
+
+print("Caltech industry:")
+caltech_counts = pd.Series(data=dict(zip(industry_data["company"], industry_data["Caltech"])), index=industry_data["company"])
+print(f"{caltech_counts/caltech_counts.sum() * 100}")
